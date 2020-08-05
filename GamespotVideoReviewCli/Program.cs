@@ -52,7 +52,7 @@ namespace GamespotVideoReviewCli
                     itemObj.PublishDate = item.publish_date;
                     Console.WriteLine(item.publish_date);
 
-                    itemObj.Blurb = item.deck;
+                    itemObj.Blurb = item.deck.Replace("\"","'").Replace("\n", "").Replace("\r", "");
                     Console.WriteLine(item.deck);
 
                     itemObj.HighVideo = item.high_url;
@@ -78,7 +78,7 @@ namespace GamespotVideoReviewCli
 
         static jsonClass.Rootobject getJson(int offset, int limit)
         {
-            string apiKey = "YOUR GAMESPOT APIKEY";
+            string apiKey = "YOU GAMESPOT API KEY HERE";
             using (var client = new WebClient())
             {
                 var settings = new JsonSerializerSettings();

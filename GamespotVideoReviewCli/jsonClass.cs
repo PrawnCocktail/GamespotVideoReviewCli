@@ -15,8 +15,8 @@ namespace GamespotVideoReviewCli
         public string GameName { get; set; }
         public string PublishDate { get; set; }
         public string Blurb { get; set; }
-        public string HighVideo { get; set; }
         public string LowVideo { get; set; }
+        public string HighVideo { get; set; }
         public string HDVideo { get; set; }
         public string ReviewUrl { get; set; }
     }
